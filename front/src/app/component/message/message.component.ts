@@ -14,7 +14,7 @@ export class MessageComponent implements OnInit {
 sujetId !: string;
 message !: Message;
 sujet !: Sujet;
-count !: number;
+count : number = 0;
   constructor(private sujetService : SujetService, private route: ActivatedRoute) { 
     this.sujetId = this.route.snapshot.params['id'];
   }
@@ -27,6 +27,11 @@ count !: number;
     
     this.sujetService.findById(this.sujetId).subscribe(data => {
       this.sujet = data;
+      this.sujet.message.forEach(element => {
+        this.count += element.likes
+         console.log(this.count);
+        
+      });
     })
   }
 
