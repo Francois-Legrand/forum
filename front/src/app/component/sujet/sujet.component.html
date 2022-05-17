@@ -4,8 +4,8 @@
             <div class="flex-row">
                 <div class="display-end">
                     <h1>{{sujet.title}}</h1>
-                    <span>crée le {{sujet.createdAt}}</span>
-                    <span>Modifié {{sujet.updatedAt}}</span>
+                    <span>crée le {{sujet.createdAt | date}}</span>
+                    <span>Modifié {{sujet.updatedAt | date}}</span>
                     <span>
                        {{sujet.message.length}} messages dans cette conversation
                     </span>
