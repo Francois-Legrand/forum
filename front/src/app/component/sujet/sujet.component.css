@@ -1,0 +1,32 @@
+ul{
+    border: 1px solid black;
+}
+li{
+    list-style: none;
+    border: 1px solid black;
+}
+.image{
+    height: 30px;
+    width: 30px;
+}
+.image2{
+    height: 40px;
+    width: 40px;
+}
+.flex-pouce{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+}
+.display-end{
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.margin{
+    margin: 10px;
+}

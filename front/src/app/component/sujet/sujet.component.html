@@ -1,0 +1,23 @@
+<div>
+    <ul *ngFor="let sujet of sujets">
+        <li class="margin" [routerLink] = "['/messages', sujet._id]">
+            <div class="flex-row">
+                <div class="display-end">
+                    <h1>{{sujet.title}}</h1>
+                    <span>crée le {{sujet.createdAt}}</span>
+                    <span>Modifié {{sujet.updatedAt}}</span>
+                    <span>
+                       {{sujet.message.length}} messages dans cette conversation
+                    </span>
+                </div>
+                <span class="flex-row">
+                    <span>{{sujet.likes}}</span>
+                    <span class="flex-pouce">
+                        <img class="image" src="../assets/images/poucebleu.png" alt="">
+                        <img class="image2" src="../assets/images/poucerouge.png" alt="">
+                    </span>
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    mongo:
+        image: mongo
+        container_name: mongo
+        ports:
+          - "27017:27017"
+    back:
+        container_name: back
+        build: ./back
+        ports:
+          - "3000:3000"
+        depends_on:
+          - mongo 
+    front:
+        container_name: front
+        build: ./front
+        ports:
+          - "8080:80"
+        depends_on:
+          - back

@@ -1,0 +1,38 @@
+ul{
+    border: 1px solid black;
+}
+li{
+    list-style: none;
+    border: 1px solid black;
+}
+img{
+    height: 20px;
+    width: 20px;
+}
+.pouce-rouge{
+    width: 35px;
+    height: 35px;
+}
+.flex-pouce{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+}
+.display-end{
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.date{
+    padding: 5px;
+}
+.padding{
+    padding: 5px;
+}
+.margin{
+    margin: 5px;
+}

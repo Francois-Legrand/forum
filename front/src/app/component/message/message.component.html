@@ -1,0 +1,34 @@
+
+    <div *ngIf="sujet">
+    <h1>{{sujet.title}}</h1>
+        <div class="flex-row">
+            <div>
+                <span class="date">crée le {{sujet.createdAt | date}}</span>
+                <span class="date">Modifié le {{sujet.updatedAt | date}}</span>
+            </div>
+            <span>
+                <span class="flex-pouce">
+                    <img src="../assets/images/poucebleu.png" alt="">
+                    <img class="pouce-rouge" src="../assets/images/poucerouge.png" alt="">
+                </span>
+                <span>{{sujet.likes}}</span>
+            </span>
+        </div>
+        <ul>
+            <li class="padding margin" *ngFor="let message of sujet.message">
+                {{message.content}}
+                <div class="flex-row">
+                    <div class="display-end">
+                        <span>crée le {{message.createdAt | date}}</span>
+                        <span>Modifié le {{message.createdAt | date}}</span>
+                        <span>{{sujet.message.length}} messages dans la conversation</span>
+                    </div>
+                    <span class="flex-pouce">
+                        <img src="../assets/images/poucebleu.png" alt="">
+                        <img class="pouce-rouge" src="../assets/images/poucerouge.png" alt="">
+                        {{message.likes}}
+                    </span>
+                </div>
+            </li>
+        </ul>
+</div>
